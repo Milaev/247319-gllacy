@@ -6,175 +6,165 @@
 </head>
 <body>
 	<header class="main-header">
-	<div class="container">
-		<img src="http://placehold.it/150x100" alt="Логотип">
-		<nav class="main-menu">
-			<ul>
-					<li>
-						<a href="#">Каталог</a>
-						<ul class="sub-menu">
-							<li>
-								<a href="#">Новинки</a>
-							</li>
-							<li>
-								<a href="#">Сливочное</a>
-							</li>
-							<li>
-								<a href="#">Щербеты</a>
-							</li>
-							<li>
-								<a href="#">Фруктовый лед</a>
-							</li>
-							<li>
-								<a href="#">Мелорин</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="#">Доставка и оплата</a>
-					</li>
-					<li>
-						<a href="#">О компании</a>
-					</li>
-			</ul>
-		</nav>
-		<!--В разметке барбера Першин использовал просто ссылку на Вход на сайт, в барбере я тоже просто ссылкой разметил, но тут мне кажется более уместно кнопки: верно или нет?-->
-		<div class="search">
-			<button class="btn" type="button" value="search"><img src="#" alt="Лупа поиска"></button>
-			<!--думал get или post-->
-			<form class="form" action="#" method="get">
-				<input type="text" name="search" placeholder="Что ищем?">
-			</form>
+		<div class="container">
+			<img class="logo" src="http://placehold.it/150x100" alt="Логотип">
+			<nav class="main-menu">
+				<ul>
+						<li>
+							<a href="#">Каталог</a>
+							<ul class="sub-menu">
+								<li>
+									<a href="#">Новинки</a>
+								</li>
+								<li>
+									<a href="#">Сливочное</a>
+								</li>
+								<li>
+									<a href="#">Щербеты</a>
+								</li>
+								<li>
+									<a href="#">Фруктовый лед</a>
+								</li>
+								<li>
+									<a href="#">Мелорин</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Доставка и оплата</a>
+						</li>
+						<li>
+							<a href="#">О компании</a>
+						</li>
+				</ul>
+			</nav>
+			<div class="search">
+				<a class="search-button" href="#">Поиск</a>
+				<form class="form" action="#" method="get">
+					<input type="text" name="search" placeholder="Что ищем?">
+				</form>
+			</div>
+			<div class="user-block">
+				<a class="login" href="#">Вход</a>
+				<form class="form" action="#" method="post">
+					<input type="email" name="e-mail" placeholder="Электронная почта">
+					<input type="password" name="password" placeholder="Пароль">
+					<button class="btn" type="submit" value="Enter">Войти</button>
+					<a href="#">Забыли пароль?</a>
+					<a href="#">Новая регистрация</a>
+				</form>
+			</div>
+			<div class="basket">
+				<a class="basket-button" href="#">Пусто</a>
+			</div>
+			<div class="worktime">
+				<p>c 10 до 20, ежедневно</p>
+				<p>8 812 450-25-25</p>
+			</div>
 		</div>
-		<div class="user-enter">
-			<a class="login" href="#">Вход</a>
-			<!--Нужно ли формам класс вообще? я же смогу их сверстать просто .user-enter form {css-свойства} или вообще им давать класс user-enter-form?-->
-			<form class="form" action="#" method="post">
-				<input type="text" name="e-mail" placeholder="Электронная почта">
-				<input type="password" name="password" placeholder="Пароль">
-				<a class="login" href="#">Войти</a>
-				<a href="#">Забыли пароль?</a>
-				<a href="#">Новая регистрация</a>
-			</form>
-		</div>
-		<div class="basket-enter">
-		<!--Вот тут тоже ссылка или кнопка? Макеев говорил что везде лучше кнопки, а тут Першин сказал мол мы JS переопределим поведение ссылок, а вот если бы кнопка была и js не прогрузился, то человек не попадет куда надо-->
-			<a class="basket" href="#">Пусто</a>
-		</div>
-		<div class="worktime">
-			<p>c 10 до 20, ежедневно</p>
-			<p>8 812 450-25-25</p>
-		</div>
-	</div>
 	</header>
-	<main class="container">
-		<div class="slider">
-		<!--Ваще не понимаю как листалку организовать, вернее куда юзер должен тыкнуть, чтобы появился след вариант, пока просто разметил компоненты
-		Посмотрел в вк это реализовано через атрибут onmousedown мы будем его разбирать?-->
-			<div class="first-option">
-				<a href=#>
-				<img src="#" width="300" height="300" alt="Крем-брюле">
-				<img src="#" width="300" height="300" alt="Пломбир с малиновым джемом" >
-				<h1 class="title">Крем-брюле и пломбир с малиновым джемом</h1>
-				</a>
+	<main class="content">
+		<div class="conatiner">
+			<div class="slider">
+				<div class="option">
+				<!--Ссылка ли 2 картинки и название? в каталоге мы решили что только надпись ссылка, хотя думаю удобнее будет сделать всю композицию ссылкой, можешь это уточнить? в спеке не нашел-->
+					<a href=#>
+						<img src="#" width="300" height="300" alt="Крем-брюле">
+						<img src="#" width="300" height="300" alt="Пломбир с малиновым джемом" >
+						<div class="title">Крем-брюле и пломбир с малиновым джемом</div>
+					</a>
+					<a class="btn" href="#">Давайте оба!</a>
+				</div>
+				<div class="option">
+					<a href="#">
+						<img src="#" width="300" height="300" alt="Шоколадный пломбир">
+						<img src="#" width="300" height="300" alt="Лимонный сорбет">
+						<div class="title">Шоколадный пломбир и Лимонный сорбет</div>
+					</a>
+					<a class="btn" href="#">Давайте оба!</a>
+				</div>
+				<div class="option">
+					<a href="#">
+						<img src="#" width="300" height="300" alt="Пломбир с помадкой">
+						<img src="#" width="300" height="300" alt="Клубничный щербет">
+						<div class="title">Пломбир с помадкой и Клубничный щербет</div>
+					</a>
+					<a class="btn" href="#">Давайте оба!</a>
+				</div>
+				<input type="radio" name="slider" value="first-option">
+				<input type="radio" name="slider" value="second-option">
+				<input type="radio" name="slider" value="third-option">
 			</div>
-			<div class="second-option">
-				<a href="#">
-				<img src="#" width="300" height="300" alt="Шоколадный пломбир">
-				<img src="#" width="300" height="300" alt="Лимонный сорбет">
-				<h1 class="title">Шоколадный пломбир и Лимонный сорбет</h1>
-				</a>
+			<div class="raspberries">
+				<h2>Малинка даром!</h2>
+				<p>При покупке 2кг любого фруктового мороженного, добавим в ваш заказ банку малинового варенья бесплатно</p>
+				<a class="btn" href="#">Хочу варенье!</a>
 			</div>
-			<div class="third-option">
-				<a href="#">
-				<img src="#" width="300" height="300" alt="Пломбир с помадкой">
-				<img src="#" width="300" height="300" alt="Клубничный щербет">
-				<h1 class="title">Пломбир с помадкой и Клубничный щербет</h1>
-				</a>
+			<div class="chocolate">
+				<h2>Шоколадки даром!</h2>
+				<p>При покупке 2кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно</p>
+				<a class="btn" href="#">Хочу шоколадки!</a>
 			</div>
-			<!--Нужна форма тут?-->
-			<input type="radio" name="slider" value="first-option">
-			<input type="radio" name="slider" value="second-option">
-			<input type="radio" name="slider" value="third-option">
-			<!--А еще надо ли писать баттону сабмит? он же по дефолту вроде и не совсем понятно как этот баттон отправить в корзину два товара-->
-			<button class="btn" type="submit" value="Давайте оба!">Давайте оба!</button>
-		</div>
-		<div class="raspberries">
-			<h2>Малинка даром!</h2>
-			<p>При покупке 2кг любого фруктового мороженного, добавим в ваш заказ банку малинового варенья бесплатно</p>
-			<button class="btn" type="submit" value="Хочу варенье!">Хочу варенье!</button>
-		</div>
-		<div class="chocolate">
-			<h2>Шоколадки даром!</h2>
-			<p>При покупке 2кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно</p>
-			<!--нужно ли писать value? и класс у баттонов должен быть у всех одинаковый?, чтобы удобно стилизовать было?-->
-			<button class="btn" type="submit" value="Хочу шоколадки!">Хочу шоколадки!</button>
-		</div>
-		<article class="first-item">
-			<a href="#">
-				<img src="#" width="40" height="40" alt="Хит">
+			<article class="item">
+				<!--Хит будет оформительским фоном-->
 				<img src="#" width="150" height="150" alt="Апельсиновое">
-				<p>310 кг</p>
-				<img src="#" width="40" height="40" alt="Значок рубля">
-				<p>Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
-			</a>
-		</article>
-		<article class="second-item">
-			<a href="#">
-				<img src="#" width="40" height="40" alt="Хит">
+				<span class="price">310 <span class="ruble">Р</span>/ кг</span>
+				<a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+			</article>
+			<article class="item">
+				<!--Хит будет оформительским фоном-->
 				<img src="#" width="150" height="150" alt="Кофейное">
-				<p>380 кг</p>
-				<img src="#" width="40" height="40" alt="Значок рубля">
-				<p>Сливочно-кофейное с кусочками шоколада</p>
-			</a>
-		</article>
-		<article class="third-item">
-			<a href="#">
-				<img src="#" width="40" height="40" alt="Хит">
+				<span class="price">380 <span class="ruble">Р</span>/ кг</span>
+				<a href="#">Сливочно-кофейное с кусочками шоколада</a>
+			</article>
+			<article class="item">
+				<!--Хит будет оформительским фоном-->
 				<img src="#" width="150" height="150" alt="Клубничное">
-				<p>355 кг</p>
-				<img src="#" width="40" height="40" alt="Значок рубля">
-				<p>Сливочно-клубничное с присыпкой из белого шоколада</p>
-			</a>
-		</article>
-		<article class="fourth-item">
-			<a href="#">
-				<img src="#" width="40" height="40" alt="Хит">
+				<span class="price">355 <span class="ruble">Р</span>/ кг</span>
+				<a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+			</article>
+			<article class="item">
+				<!--Хит будет оформительским фоном-->
 				<img src="#" width="150" height="150" alt="Крем-брюле">
-				<p>415 кг</p>
-				<img src="#" width="40" height="40" alt="Значок рубля">
-				<p>Сливочное крем-брюле с карамельной подливкой</p>
-			</a>
-		</article>
-		<div class="blog">
-			<p>Новое в нашем блоге</p>
-			<a href="#">10 способов сервировки фруктовых щербетов к столу</a>
-		</div>
-		<div class="subscribe">
-			<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =) </p>
-			<!--Нужна форма тут?-->
-			<input type="text" name="e-mail" placeholder="Электронная почта">
-			<button class="btn" type="submit">Отправить</button>
-		</div>
-		<div class="maps">
-		<!--Была идея запилить скрипт с яндекс карт -вставлял, но валидатор писал эрорр, также ставил ширину у карты 100% он тоже писал эррор-->
-			<img src="#" width="40" height="70" alt="Метка мороженного">
-			<img src="#" width="1200" height="300" alt="map">
-		</div>
-		<div class="feedback">
-			<p>Адрес главного офиса и<br> офлайн магазина:<br>
-			<strong>ул. Большая Конюшенная<br> 19/8, Санкт-Петербург<br></strong>
-			Для заказов по телефону:<br>
-			<strong>8 812 450-25-25<br></strong>
-			(с 10 до 20 ежедневно)
-			</p>
-			<button class="btn" type="submit">Форма обратной связи</button>
-			<form class="form" action="#" method="post">
-				<input type="text" name="name" placeholder="Как вас зовут?">
-				<input type="text" name="e-mail" placeholder="Ваша почта для ответа?">
-				<textarea name="message" cols="35" rows="8" placeholder="Напишите что-нибудь..."></textarea>
-				<button class="btn" type="submit">Отправить</button>
-			</form>
+				<span class="price">415 <span class="ruble">Р</span>/ кг</span>
+				<a href="#">Сливочное крем-брюле с карамельной подливкой</a>
+			</article>
+			<div class="shop">
+				<h2>Магазин Глейси - это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h2>
+				<div class="technology">
+					Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
+					<br>
+					Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья. 
+				</div>
+				<div class="technology">
+					Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
+					<br>
+					Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.
+				</div>
+			</div>
+			<div class="blog">
+				<p>Новое в нашем блоге</p>
+				<a href="#">10 способов сервировки фруктовых щербетов к столу</a>
+			</div>
+			<div class="subscribe">
+				<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =) </p>
+				<!--Нужна форма тут?-->
+				<input type="email" name="e-mail" placeholder="Электронная почта">
+				<button class="btn" type="submit" value="send">Отправить</button>
+			</div>
+			<div class="maps">
+				<img src="#" width="1200" height="300" alt="Карта с маркером-мороженным">
+			</div>
+			<div class="feedback">
+				<p>
+					Адрес главного офиса и<br> офлайн магазина:<br>
+					<b>ул. Большая Конюшенная<br> 19/8, Санкт-Петербург<br></b>
+					Для заказов по телефону:<br>
+					<b>8 812 450-25-25<br></b>
+					(с 10 до 20 ежедневно)
+				</p>
+				<a href="#">Форма обратной связи</a>
+			</div>
 		</div>
 	</main>
 	<footer class="main-footer">
@@ -184,7 +174,7 @@
 			<a class="social-btn social-btn-fb" href="#">Фейсбук</a>
 			<a class="social-btn social-btn-vk" href="#">Вконтакте</a>
 		</section>
-		<section class="info">
+		<section class="footer-info">
 			<img src="#" width="10" height="10" alt="heart">
 			<a href="#">Для поставщиков</a>
 			<a href="#">Наши документы</a>
@@ -196,5 +186,11 @@
 				<a href="https://htmlacademy.ru">Сделано в HTML Academy &copy;</a>
 		</section>
 	</footer>
+	<form class="form" action="#" method="post">
+			<input type="text" name="name" placeholder="Как вас зовут?">
+			<input type="email" name="e-mail" placeholder="Ваша почта для ответа?">
+			<textarea name="message" cols="35" rows="8" placeholder="Напишите что-нибудь..."></textarea>
+			<button class="btn" type="submit" value="send">Отправить</button>
+	</form>
 </body>
 </html>
