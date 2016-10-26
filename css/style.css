@@ -1,18 +1,23 @@
-/* body и для заголовков двух типов текстовые стили:
-
-размер шрифта,
-высоту строки,
-цвет шрифта,
-жирность шрифта,
-гарнитуру (название шрифта).
-Задавать текстовые стили для всех элементов не нужно, достаточно трёх CSS-правил.
-
-Подключать нестандартный шрифт к странице не нужно. */
-
 body {
-	font-size: 
-	color:
-	line-height:
-	font-weight:
-	font-style:
+	font-size: 18px;
+	color: #ffffff;
+	line-height: 22px;
+	font-weight: bold;
+	font-family: Roboto sans-serif;
+}
+
+h1 {
+	font-size: 60px;
+	color: #ffffff;
+	line-height: 60.35px;
+	font-weight: bold;
+	font-family: Roboto sans-serif;
+}
+
+h2 {
+	font-size: 35px;
+	color: #ffffff;
+	line-height: 41px;
+	font-weight: bold;
+	font-family: Roboto sans-serif;
 }
