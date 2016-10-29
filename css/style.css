@@ -2,17 +2,10 @@ body {
 	font-size: 18px;
 	color: #ffffff;
 	line-height: 22px;
-	font-weight: normal;
 	font-family: "Roboto", "Arial", sans-serif;
 }
 
-h1 {
-	font-size: 35px;
-	line-height: 41px;
-	font-weight: bold;
-}
-
-h2 {
+h1, h2 {
 	font-size: 35px;
 	line-height: 41px;
 	font-weight: bold;
