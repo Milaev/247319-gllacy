@@ -7,8 +7,8 @@
 </head>
 <body>
 	<header class="main-header">
-		<div class="container">
-			<img class="logo" src="img/img-logo.svg" width="153" height="63" alt="Логотип">
+		<div class="container clearfix">
+			<img class="logo" src="img/img-logo.svg" width="154" height="63" alt="Логотип">
 			<nav class="main-menu">
 				<ul>
 						<li>
@@ -39,28 +39,30 @@
 						</li>
 				</ul>
 			</nav>
-			<div class="search">
-				<a class="search-button" href="#">Поиск</a>
-				<form class="form" action="#" method="get">
-					<input type="text" name="search" placeholder="Что ищем?">
-				</form>
-			</div>
-			<div class="user-block">
-				<a class="login" href="#">Вход</a>
-				<form class="form" action="#" method="post">
+			<div class="userbar">
+				<div class="search">
+					<a class="search-button" href="#"><img src="img/icon-loop.png" width="17" height="17" alt="Поиск"></a>
+					<form class="form" action="#" method="get">
+						<input type="text" name="search" placeholder="Что ищем?">
+					</form>
+				</div>
+				<div class="user-block">
+					<a class="login" href="#">Вход</a>
+					<form class="form" action="#" method="post">
 					<input type="email" name="e-mail" placeholder="Электронная почта">
 					<input type="password" name="password" placeholder="Пароль">
 					<button class="btn" type="submit" value="Enter">Войти</button>
-					<a href="#">Забыли пароль?</a>
-					<a href="#">Новая регистрация</a>
-				</form>
-			</div>
-			<div class="basket">
-				<a class="basket-button" href="#">Пусто</a>
-			</div>
-			<div class="worktime">
-				<p>c 10 до 20, ежедневно</p>
-				<p>8 812 450-25-25</p>
+						<a href="#">Забыли пароль?</a>
+						<a href="#">Новая регистрация</a>
+					</form>
+				</div>
+				<div class="basket">
+					<a class="basket-button" href="#">Пусто</a>
+				</div>
+				<div class="worktime">
+					<p>c 10 до 20, ежедневно</p>
+					<p>8 812 450-25-25</p>
+				</div>
 			</div>
 		</div>
 	</header>
@@ -93,43 +95,41 @@
 				<p>При покупке 2кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно</p>
 				<a class="btn" href="#">Хочу шоколадки!</a>
 			</div>
-			<article class="item">
-				<!--Хит будет оформительским фоном-->
-				<img src="img/img-item-1-hit.png" width="267" height="267" alt="Апельсиновое">
-				<span class="price">310 <span class="ruble">Р</span>/ кг</span>
-				<a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-			</article>
-			<article class="item">
-				<!--Хит будет оформительским фоном-->
-				<img src="img/img-item-2-hit.png" width="267" height="267" alt="Кофейное">
-				<span class="price">380 <span class="ruble">Р</span>/ кг</span>
-				<a href="#">Сливочно-кофейное с кусочками шоколада</a>
-			</article>
-			<article class="item">
-				<!--Хит будет оформительским фоном-->
-				<img src="img/img-item-3-hit.png" width="267" height="267" alt="Клубничное">
-				<span class="price">355 <span class="ruble">Р</span>/ кг</span>
-				<a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
-			</article>
-			<article class="item">
-				<!--Хит будет оформительским фоном-->
-				<img src="img/img-item-4-hit.png" width="267" height="267" alt="Крем-брюле">
-				<span class="price">415 <span class="ruble">Р</span>/ кг</span>
-				<a href="#">Сливочное крем-брюле с карамельной подливкой</a>
-			</article>
-			<div class="shop">
+			<div class="hit">
+				<article class="item">
+					<!--Хит будет оформительским фоном-->
+					<img src="img/img-item-1-hit.png" width="267" height="267" alt="Апельсиновое">
+					<span class="price">310 <span class="ruble">Р</span>/ кг</span>
+					<a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+				</article>
+				<article class="item">
+					<!--Хит будет оформительским фоном-->
+					<img src="img/img-item-2-hit.png" width="267" height="267" alt="Кофейное">
+					<span class="price">380 <span class="ruble">Р</span>/ кг</span>
+					<a href="#">Сливочно-кофейное с кусочками шоколада</a>
+				</article>
+				<article class="item">
+					<!--Хит будет оформительским фоном-->
+					<img src="img/img-item-3-hit.png" width="267" height="267" alt="Клубничное">
+					<span class="price">355 <span class="ruble">Р</span>/ кг</span>
+					<a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+				</article>
+				<article class="item">
+					<!--Хит будет оформительским фоном-->
+					<img src="img/img-item-4-hit.png" width="267" height="267" alt="Крем-брюле">
+					<span class="price">415 <span class="ruble">Р</span>/ кг</span>
+					<a href="#">Сливочное крем-брюле с карамельной подливкой</a>
+				</article>
+			</div>
+			<div class="shop clearfix">
 				<h2>Магазин Глейси - это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h2>
 				<div class="technology">
-					Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
-				</div>
-				<div class="technology">	
-					Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья. 
+					<p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
+					<p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
 				</div>
 				<div class="technology">
-					Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
-				</div>
-				<div class="technology">
-					Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.
+					<p>Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+					<p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
 				</div>
 			</div>
 			<div class="blog">
@@ -143,9 +143,11 @@
 					<button class="btn" type="submit" value="send">Отправить</button>
 				</form>
 			</div>
-			<div class="maps">
-				<img src="img/img-map.jpg" width="1200" height="430" alt="Карта с маркером-мороженным">
-			</div>
+		</div>
+		<div class="maps">
+			<img src="img/img-map.jpg" width="1200" height="430" alt="Карта с маркером-мороженным">
+		</div>
+		<div class="container">
 			<div class="feedback">
 				<p>
 					Адрес главного офиса и<br> офлайн магазина:<br>
@@ -159,24 +161,26 @@
 		</div>
 	</main>
 	<footer class="main-footer">
-		<section class="footer-social">
-			<a class="social-btn social-btn-tw" href="#">Твиттер</a>
-			<a class="social-btn social-btn-inst" href="#">Инстаграм</a>
-			<a class="social-btn social-btn-fb" href="#">Фейсбук</a>
-			<a class="social-btn social-btn-vk" href="#">Вконтакте</a>
-		</section>
-		<section class="footer-info">
-			<a href="#">Для поставщиков</a>
-			<a href="#">Наши документы</a>
-			<a href="#">О производстве</a>
-			<a href="#">Экологические стандарты</a>
-		</section>
-		<section class="footer-copyright">
-				<img src="img/icon-logo-htmlacademy.png" width="108" height="38" alt="logo">
-				<a href="https://htmlacademy.ru">Сделано в HTML Academy &copy;</a>
-		</section>
+		<div class="container">
+			<section class="footer-social">
+				<a class="social-btn social-btn-tw" href="#">Твиттер</a>
+				<a class="social-btn social-btn-inst" href="#">Инстаграм</a>
+				<a class="social-btn social-btn-fb" href="#">Фейсбук</a>
+				<a class="social-btn social-btn-vk" href="#">Вконтакте</a>
+			</section>
+			<section class="footer-info">
+				<a href="#">Для поставщиков</a>
+				<a href="#">Наши документы</a>
+				<a href="#">О производстве</a>
+				<a href="#">Экологические стандарты</a>
+			</section>
+			<section class="footer-copyright">
+					<img src="img/icon-logo-htmlacademy.png" width="108" height="38" alt="logo">
+					<a href="https://htmlacademy.ru">Сделано в HTML Academy &copy;</a>
+			</section>
+		</div>
 	</footer>
-	<form class="form" action="#" method="post">
+	<form class="feedback-form" action="#" method="post">
 			<input type="text" name="name" placeholder="Как вас зовут?">
 			<input type="email" name="e-mail" placeholder="Ваша почта для ответа?">
 			<textarea name="message" cols="35" rows="8" placeholder="Напишите что-нибудь..."></textarea>
