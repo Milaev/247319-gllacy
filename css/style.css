@@ -35,9 +35,10 @@ h1, h2 {
 .userbar {
 	float: right;
 	width: 267px;
+	position: relative;
 }
 
-.search-button {
+.search {
 	float: left;
 	width: 17px;
 	margin-top: 30px;
@@ -70,15 +71,16 @@ h1, h2 {
 }
 
 .worktime {
-	float: right;
+	position: absolute;
+	top: 51px;
+	left: 101px;
 	width: 165px;
 	font-size: 14px;
 	margin-top: 29px;
 }
 
-.breadcrumbs {
-	float: left;
-	width: 267px;
+.breadcrumbs li {
+	display: inline-block;
 	margin-bottom: 10px;
 }
 
@@ -87,31 +89,30 @@ h1, h2 {
 }
 
 .sorting {
-	float: left;
+	display: inline-block;
 	width: 195px;
 	margin-right: 14px;
 }
 
 .price-filter {
-	float: left;
+	display: inline-block;
 	width: 220px;
 }
 
 .fatness {
-	float: left;
-	width: 411px;
-	margin-right: 293px;
+	display: inline-block;
 }
 
 .toping {
-	float: left;
+	display: inline-block;
 	width: 700px;
-	margin-right: 14px;
+
 }
 
 .filters button {
-	float: left;
+	float: right;
 	width: 145px;
+	margin-right: 293px;
 }
 
 .slider {
@@ -132,14 +133,15 @@ h1, h2 {
 	margin-bottom: 39px;
 }
 
-.hit .item {
-	float: left;
+.goods .item {
+	display: inline-block;
 	width: 267px;
+	vertical-align: top;
 	margin-right: 26px;
 	margin-bottom: 40px;
 }
 
-.hit .item:nth-child(4) {
+.goods .item:nth-child(4n) {
 	margin-right: 0;
 }
 
@@ -168,32 +170,21 @@ h1, h2 {
 }
 
 .maps {
-	width: 1200px;
+	position: relative;
+	width: 100%;
 	margin: 0 auto;
 	margin-bottom: 17px;
 }
 
-/* там когда слайдер встанет другие координат снизу будут 
-хз какой позишн.бляяя(((((*/
 .feedback {
 	position: absolute;
-	left: 1171px;
-	top: 1666px;
+	top: 63px;
+	right: 27px;
+	
 }
 
 .feedback-form {
 	display: none;
-}
-
-.goods .item {
-	float: left;
-	width: 267px;
-	margin-right: 26px;
-	margin-bottom: 36px;
-}
-
-.goods .item:nth-child(4n) {
-	margin-right: 0;
 }
 
 .pagination {
