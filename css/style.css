@@ -62,9 +62,10 @@ h1, h2 {
 	display: none;
 }
 
-.main-menu li:hover .sub-menu {
+.main-menu li:hover ul {
 	display: block;
 }
+
 
 .sub-menu a {
 	display: block;
@@ -182,12 +183,16 @@ h1, h2 {
 	float: left;
 	width: 560px;
 	margin-bottom: 39px;
+	background: #D03641 url("../img/bg-raspberry.jpg") no-repeat;
+	border-radius: 15px;
 }
 
 .chocolate {
 	float: right ;
 	width: 560px;
 	margin-bottom: 39px;
+	background: #B95B32 url("../img/bg-chocolate.jpg") no-repeat;
+	border-radius: 15px;
 }
 
 .goods .item {
@@ -196,17 +201,33 @@ h1, h2 {
 	vertical-align: top;
 	margin-right: 26px;
 	margin-bottom: 40px;
+	background: url("../img/img-hit.png") no-repeat;
 }
 
 .goods .item:nth-child(4n) {
 	margin-right: 0;
 }
 
+/* Исправить размеры шрифта по макету */
+.shop {
+	background: #FFF9CB url("../img/bg-waffle.jpg") repeat;
+	border-radius: 15px;
+	margin-bottom: 10px;
+}
+
+.shop h2 {
+	color: #323232;
+	font-size: 26px;
+	line-height: 32px;
+	padding-top: 20px;
+	padding-left: 10px;
+}
+
 .technology {
+	color: #323232;
 	float: left;
 	width: 560px;
 	margin-right: 26px;
-	margin-bottom: 10px;
 }
 
 .technology:last-child {
@@ -214,10 +235,21 @@ h1, h2 {
 }
 
 .blog {
+	color: black;
 	float: left;
 	width: 560px;
 	margin-right: 26px;
-	margin-bottom: 40px;
+	padding-bottom: 90px;
+	background: #EAD8E9 url("../img/bg-blog.jpg") no-repeat;
+	border-radius: 15px;
+}
+
+.blog a {
+	color: black;
+	font-size: 22px;
+	font-weight: bold;
+	text-decoration: underline;
+	border: none;
 }
 
 .subscribe {
@@ -228,6 +260,7 @@ h1, h2 {
 
 .maps {
 	margin: 0 auto;
+	margin-top: 40px;
 	margin-bottom: 17px;
 	width: 100%;
 	height: auto;
@@ -270,6 +303,44 @@ h1, h2 {
 .footer-copyright {
 	float: right;
 	width: 267px;
+}
+
+/*Поправить цвета и отступы*/
+
+.social-btn {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	margin-right: 10px;
+	vertical-align: middle;
+	background: url("../img/sprite.png") no-repeat;
+	border-radius: 20px;
+	border: 4px solid #ffffff;
+}
+
+.social-btn-tw {
+	background-position: -11px -638px;
+}
+
+.social-btn-inst {
+	background-position: -11px -176px;
+}
+
+.social-btn-fb {
+	background-position: -11px -51px;
+}
+
+.social-btn-vk {
+	background-position: -11px -689px;
+}
+
+/*Поправить цвета и отступы*/
+.btn {
+	display: block;
+	width: 160px;
+	background-color: #F3401A;
+	border-radius: 30px;
+	padding: 10px 15px;
 }
 
 .clearfix::after {
