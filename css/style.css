@@ -6,7 +6,7 @@ body {
 	color: #ffffff;
 	line-height: 22px;
 	font-family: "Roboto", "Arial", sans-serif;
-	background: #93a99d;
+	background: #849d8f url("../img/img-mainphoto-1.png") no-repeat top center;
 }
 body a {
 	color: #ffffff;
@@ -18,6 +18,23 @@ h1, h2 {
 	font-size: 35px;
 	line-height: 41px;
 	font-weight: bold;
+}
+
+.slider {
+  position: relative;
+  padding-top: 270px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.slide-title {
+  width: 700px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  font-weight: 800;
+  font-size: 60px;
 }
 
 .container {
@@ -173,12 +190,6 @@ h1, h2 {
 
 }
 
-.slider {
-	width: 250px;
-	margin: 0 auto;
-	text-align: center;
-}
-
 .raspberries {
 	float: left;
 	width: 560px;
@@ -197,15 +208,24 @@ h1, h2 {
 
 .goods .item {
 	display: inline-block;
+	position: relative;
 	width: 267px;
 	vertical-align: top;
 	margin-right: 26px;
 	margin-bottom: 40px;
-	background: url("../img/img-hit.png") no-repeat;
+	z-index: 5;
 }
 
 .goods .item:nth-child(4n) {
 	margin-right: 0;
+}
+
+.hit {
+	position: absolute;
+	width: 61px;
+	height: 61px;
+	background: url("../img/img-hit.png") no-repeat;
+	z-index: 10;
 }
 
 /* Исправить размеры шрифта по макету */
