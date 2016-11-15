@@ -136,15 +136,11 @@ h1, h2 {
 .main-menu {
 	float: left;
 	width: 582px;
-}
-
-.main-menu a:hover {
-	background: #ffffff;
-	color: #333333;
+	font-weight: bold;
 }
 
 .main-menu ul {
-	margin-top: 30px;
+	margin-top: 23px;
 	margin-left: 30px;
 	padding: 0;
 	list-style: none;
@@ -152,19 +148,36 @@ h1, h2 {
 
 .main-menu li {
 	display: inline-block;
+	margin-right: 27px;
+	white-space: nowrap;
 	vertical-align: top;
 	position: relative;
-	margin-right: 20px;
+}
+
+.main-menu a {
+	display: block;
+	color: #ffffff;
+	padding: 6px 13px 6px 14px;
+	border: none;
+}
+
+.main-menu a:hover {
+	border-radius: 20px;
+	background: #f8f7f4;
+	color: #333333;
+	text-decoration: none;
 }
 
 .main-menu .sub-menu {
 	position: absolute;
-	left: -20px;
 	width: 143px;
+	left: -20px;
+	z-index: 10;
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	background: #ffffff;
+	background: #f8f7f4;
+	border-radius: 5px;
 	display: none;
 }
 
@@ -172,19 +185,33 @@ h1, h2 {
 	display: block;
 }
 
-.sub-menu a {
+.sub-menu li {
 	display: block;
-	width: 103px;
 	text-decoration: none;
-	color: #323232;
 	font-size: 14px;
 	line-height: 16px;
-	padding: 11px 20px;
+	font-weight: normal;
+}
+
+.main-menu .sub-menu a {
+	color: #333333;
+	display: block;
+	width: 109px;
+	font-size: 14px;
+	line-height: 16px;
+	padding-top: 12px;
+	padding-bottom: 14px;
+	padding-left: 21px;
+}
+
+.sub-menu li:first-child {
+	border-bottom: 1px solid #d1d0ce;
+	font-weight: bold;
 }
 
 .sub-menu a:hover {
-	display: block;
 	background: #fbded7;
+	border-radius: 5px;
 }
 
 .sub-menu a:active {
