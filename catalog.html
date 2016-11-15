@@ -26,7 +26,7 @@
 		</nav>
 		<div class="userbar clearfix">
 			<div class="search">
-				<a class="search-button" href="#"><img src="img/icon-loop.png" width="17" height="17" alt="Поиск"></a>
+				<a class="search-button" href="#"></a>
 				<form class="form" action="#" method="get">
 					<input type="text" name="search" placeholder="Что ищем?">
 				</form>
@@ -42,8 +42,8 @@
 				</form>
 			</div>
 			<div class="basket">
-				<a class="basket-button" href="#">2 товара</a>
-				<div class="full-basket">
+				<a class="full-basket" href="#">2 товара</a>
+				<div class="full-basket-table">
 					<table>
 						<tr>
 							<td><input type="checkbox" checked></td>
@@ -65,8 +65,8 @@
 				</div>
 			</div>
 			<div class="worktime">
-				<p>c 10 до 20, ежедневно</p>
-				<p>8 812 450-25-25</p>
+				<span class="time">c 10 до 20, ежедневно<br></span>
+				<span class="phone">8 812 450-25-25</span>
 			</div>
 		</div>
 	</div>
@@ -122,76 +122,77 @@
 				</form>
 			</div>
 			<div class="goods">
-				<article class="item">
+				<article class="item quick-view">
 					<img src="img/img-item-1-hit.png" width="267" height="267" alt="Апельсиновое">
-					<span class="price">310 <span class="ruble">Р</span>/ кг</span>
+					<span class="price">310  <span class="ruble"></span><span class="kg">  /кг</span></span>
 					<a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+					<a class="btn btn-quick-view" href="#">Быстрый просмотр</a>
 				</article><!--
-				--><article class="item">
+				--><article class="item quick-view">
 					<img src="img/img-item-2-hit.png" width="267" height="267" alt="Кофейное">
-					<span class="price">380 <span class="ruble">Р</span>/ кг</span>
+					<span class="price">380  <span class="ruble"></span><span class="kg">  /кг</span></span>
 					<a href="#">Сливочно-кофейное с кусочками шоколада</a>
-					<a class="btn" href="#">Быстрый просмотр</a>
+					<a class="btn btn-quick-view" href="#">Быстрый просмотр</a>
 				</article><!--
-				--><article class="item">
+				--><article class="item quick-view focus">
 					<img src="img/img-item-3-hit.png" width="267" height="267" alt="Клубничное">
-					<span class="price">355 <span class="ruble">Р</span>/ кг</span>
+					<span class="price">355  <span class="ruble"></span><span class="kg">  /кг</span></span>
 					<a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
-					<a class="btn" href="#">Быстрый просмотр</a>
+					<a class="btn btn-quick-view" href="#">Быстрый просмотр</a>
 				</article><!--
-				--><article class="item">
+				--><article class="item quick-view">
 					<img src="img/img-item-4-hit.png" width="267" height="267" alt="Крем-брюле">
-					<span class="price">415 <span class="ruble">Р</span>/ кг</span>
+					<span class="price">415  <span class="ruble"></span><span class="kg">  /кг</span></span>
 					<a href="#">Сливочное крем-брюле с карамельной подливкой</a>
-					<a class="btn" href="#">Быстрый просмотр</a>
+					<a class="btn btn-quick-view" href="#">Быстрый просмотр</a>
 				</article><!--
-				--><article class="item">
+				--><article class="item quick-view">
 					<img src="img/img-item-5.png" width="267" height="267" alt="Брусничное">
-					<span class="price">425 <span class="ruble">Р</span>/ кг</span>
+					<span class="price">425  <span class="ruble"></span><span class="kg">  /кг</span></span>
 					<a href="#">Сливочное с брусничным джемом</a>
-					<a class="btn" href="#">Быстрый просмотр</a>
+					<a class="btn btn-quick-view" href="#">Быстрый просмотр</a>
 				</article><!--
-				--><article class="item">
+				--><article class="item quick-view">
 					<img src="img/img-item-6.png" width="267" height="267" alt="Черничное">
-					<span class="price">410 <span class="ruble">Р</span>/ кг</span>
+					<span class="price">410  <span class="ruble"></span><span class="kg">  /кг</span></span>
 					<a href="#">Сливочно-черничное с цельными ягодами черники</a>
-					<a class="btn" href="#">Быстрый просмотр</a>
+					<a class="btn btn-quick-view" href="#">Быстрый просмотр</a>
 				</article><!--
-				--><article class="item">
+				--><article class="item quick-view">
 					<img src="img/img-item-7.png" width="267" height="267" alt="Лимонное">
-					<span class="price">375 <span class="ruble">Р</span>/ кг</span>
+					<span class="price">375  <span class="ruble"></span><span class="kg">  /кг</span></span>
 					<a href="#">Сливочно-лимонное с карамельной присыпкой</a>
-					<a class="btn" href="#">Быстрый просмотр</a>
+					<a class="btn btn-quick-view" href="#">Быстрый просмотр</a>
 				</article><!--
-				--><article class="item">
+				--><article class="item quick-view">
 					<img src="img/img-item-8.png" width="267" height="267" alt="Со стружкой">
-					<span class="price">320 <span class="ruble">Р</span>/ кг</span>
+					<span class="price">320  <span class="ruble"></span><span class="kg">  /кг</span></span>
 					<a href="#">Сливочное с шоколадной стружкой</a>
-					<a class="btn" href="#">Быстрый просмотр</a>
+					<a class="btn btn-quick-view" href="#">Быстрый просмотр</a>
 				</article><!--
-				--><article class="item">
+				--><article class="item quick-view">
 					<img src="img/img-item-9.png" width="267" height="267" alt="Ванильное">
-					<span class="price">440 <span class="ruble">Р</span>/ кг</span>
+					<span class="price">440  <span class="ruble"></span><span class="kg">  /кг</span></span>
 					<a href="#">Сливочно-ванильное с кусочками шоколада</a>
-					<a class="btn" href="#">Быстрый просмотр</a>
+					<a class="btn btn-quick-view" href="#">Быстрый просмотр</a>
 				</article><!--
-				--><article class="item">
+				--><article class="item quick-view">
 					<img src="img/img-item-10.png" width="267" height="267" alt="Ментоловое">
-					<span class="price">435 <span class="ruble">Р</span>/ кг</span>
+					<span class="price">435  <span class="ruble"></span><span class="kg">  /кг</span></span>
 					<a href="#">Сливочное с ментоловым сиропом</a>
-					<a class="btn" href="#">Быстрый просмотр</a>
+					<a class="btn btn-quick-view" href="#">Быстрый просмотр</a>
 				</article><!--
-				--><article class="item">
+				--><article class="item quick-view">
 					<img src="img/img-item-11.png" width="267" height="267" alt="Черный шоколад">
-					<span class="price">355 <span class="ruble">Р</span>/ кг</span>
+					<span class="price">355  <span class="ruble"></span><span class="kg">  /кг</span></span>
 					<a href="#">Сливочное с кусочками черного шоколада</a>
-					<a class="btn" href="#">Быстрый просмотр</a>
+					<a class="btn btn-quick-view" href="#">Быстрый просмотр</a>
 				</article><!--
-				--><article class="item">
+				--><article class="item quick-view">
 					<img src="img/img-item-12.png" width="267" height="267" alt="Мятное">
-					<span class="price">420 <span class="ruble">Р</span>/ кг</span>
+					<span class="price">420  <span class="ruble"></span><span class="kg">  /кг</span></span>
 					<a href="#">Сливочное с мятным сиропом</a>
-					<a class="btn" href="#">Быстрый просмотр</a>
+					<a class="btn btn-quick-view" href="#">Быстрый просмотр</a>
 				</article>
 			</div>
 			<div class="pagination">
@@ -209,20 +210,18 @@
 		<div class="container clearfix">
 			<section class="footer-social">
 				<a class="social-btn social-btn-tw" href="#">Твиттер</a>
-				<a class="social-btn social-btn-inst" href="#">Инстаграм</a>
+				<a class="social-btn social-btn-inst" href="#">Инстаграмм</a>
 				<a class="social-btn social-btn-fb" href="#">Фейсбук</a>
 				<a class="social-btn social-btn-vk" href="#">Вконтакте</a>
 			</section>
 			<section class="footer-info">
-				<img src="#" width="10" height="10" alt="heart">
-				<a href="#">Для поставщиков</a>
+				<a href="#" class="heart">Для поставщиков</a>
 				<a href="#">Наши документы</a>
 				<a href="#">О производстве</a>
 				<a href="#">Экологические стандарты</a>
 			</section>
 			<section class="footer-copyright">
-					<img src="img/icon-logo-htmlacademy.png" width="108" height="38" alt="logo">
-					<a href="https://htmlacademy.ru">Сделано в HTML Academy &copy;</a>
+					<span>Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> &copy; 2016</span>
 			</section>
 		</div>
 	</footer>
