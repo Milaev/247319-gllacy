@@ -25,6 +25,54 @@ h1, h2 {
 	font-weight: bold;
 }
 
+input,
+textarea {
+	padding: 0;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #d3d3d2;
+	border-image: none;
+	font-family: "Roboto", "Arial", sans-serif;
+}
+
+:focus {
+	outline-width: 0;
+}
+
+.btn {
+	display: inline-block;
+	vertical-align: top;
+	color: #ffffff;
+	text-decoration: none;
+	text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+	background: #f26843;
+	background:    -moz-linear-gradient(top, #f26843 0%, #e74a35 100%);
+	background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
+	background:         linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+	border-radius: 100px;
+	box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+}
+
+.btn:hover {
+	background:    -moz-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
+	background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
+	background:         linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
+	box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.btn:active {
+	background:    -moz-linear-gradient(top, #d84732 0%, #e1613e 100%);
+	background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
+	background:         linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
+	box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
 .site-wrapper {
 	background: #849d8f url("../img/img-mainphoto-1.png") no-repeat top center;
 	transition: background-image 0.5s ease, background-color 0.5s ease;
@@ -62,13 +110,13 @@ h1, h2 {
 	padding-top: 40px;
 	margin: 0 auto;
 	margin-bottom: 30px;
-	font-weight: 800;
+	font-weight: bold;
 	font-size: 60px;
 }
 
 .slide-btn {
 	padding: 12px 50px;
-	font-weight: 600;
+	font-weight: bold;
 	font-size: 31px;
 	line-height: 41px;
 }
@@ -148,6 +196,17 @@ h1, h2 {
 
 .main-menu li {
 	display: inline-block;
+	position: relative;
+}
+
+.top-menu > li {
+	padding-bottom: 5px;
+}
+
+.main-menu .menu-item {
+	font-size: 16px;
+	line-height: 18px;
+	display: inline-block;
 	margin-right: 27px;
 	white-space: nowrap;
 	vertical-align: top;
@@ -158,20 +217,54 @@ h1, h2 {
 	display: block;
 	color: #ffffff;
 	padding: 6px 13px 6px 14px;
-	border: none;
+	border-bottom: none;
 }
 
-.main-menu a:hover {
+.menu-item:hover {
 	border-radius: 20px;
 	background: #f8f7f4;
 	color: #333333;
 	text-decoration: none;
 }
 
+.menu-catalog::after {
+	content: "";
+	position: absolute;
+	width: 70%;
+	height: 1px;
+	background: rgba(255, 255, 255, 0.2);
+	bottom: 5px;
+	left: 14px;
+	right: 13px;
+}
+
+.menu-delivery::after {
+	content: "";
+	position: absolute;
+	width: 85%;
+	height: 1px;
+	background: rgba(255, 255, 255, 0.2);
+	bottom: 5px;
+	left: 14px;
+	right: 13px;
+}
+
+.menu-about-us::after {
+	content: "";
+	position: absolute;
+	width: 78%;
+	height: 1px;
+	background: rgba(255, 255, 255, 0.2);
+	bottom: 5px;
+	left: 14px;
+	right: 13px;
+}
+
 .main-menu .sub-menu {
 	position: absolute;
-	width: 143px;
+	overflow: hidden;
 	left: -20px;
+	top: 35px;
 	z-index: 10;
 	margin: 0;
 	padding: 0;
@@ -211,7 +304,6 @@ h1, h2 {
 
 .sub-menu a:hover {
 	background: #fbded7;
-	border-radius: 5px;
 }
 
 .sub-menu a:active {
@@ -230,9 +322,14 @@ h1, h2 {
 
 .search {
 	float: left;
-	width: 17px;
+	position: relative;
+	width: 32px;
 	margin-top: 23px;
-	margin-right: 34px;
+	margin-right: 19px;
+}
+
+.search:hover .form {
+	display: block;
 }
 
 .search-button {
@@ -242,18 +339,33 @@ h1, h2 {
 	background-color: rgba(255, 255, 255, 0.2);
 	border-radius: 50%;
 	background-image: url("../img/sprite.png");
-	background-position: -2px -396px;
+	background-position: -12px -614px;
 	text-decoration: none;
 }
 
 .search-button:hover {
 	background-color: #f8f7f4;
 	background-image: url("../img/sprite.png");
-	background-position: -2px -433px;
+	background-position: -12px -651px;
 }
 
 .search .form {
+	background: #f8f7f4;
+	position: absolute;
+	width: 341px;
+	right: 0;
+	border-radius: 5px;
+	z-index: 25;
 	display: none;
+}
+
+[placeholder="Что ищем?"] {
+	font-size: 14px;
+	width: 279px;
+	line-height: 24px;
+	padding: 10px 15px 12px 15px;
+	margin: 20px 15px;
+	border-radius: 5px;
 }
 
 .user-block {
@@ -280,9 +392,9 @@ h1, h2 {
 	top: 6px;
 	left: 16px;
 	width: 21px;
-	height: 19px;
+	height: 20px;
 	background: transparent url("../img/sprite.png");
-	background-position: -10px -267px;
+	background-position: -20px -485px;
 }
 
 .login:hover {
@@ -292,11 +404,56 @@ h1, h2 {
 
 .login:hover::before {
 	background: url("../img/sprite.png");
-	background-position: -10px -306px;
+	background-position: -20px -524px;
 }
 
 .user-block .form {
+	background: #f8f7f4;
+	position: absolute;
+	width: 278px;
+	right: 131px;
+	border-radius: 5px;
+	z-index: 25;
 	display: none;
+	padding: 20px 17px 20px 19px;
+}
+
+.enter-btn {
+	float: left;
+	width: 100px;
+	font-size: 18px;
+    line-height: 24px;
+    font-weight: bold;
+    border: 0;
+    margin-right: 15px;
+    padding: 16px 25px 12px 25px;
+}
+
+.user-block input {
+	margin-bottom: 20px;
+}
+
+[placeholder="Электронная почта"],
+[placeholder="Пароль"] {
+	font-size: 14px;
+	width: 241px;
+	line-height: 24px;
+	padding: 10px 15px 12px 15px;
+	border-radius: 5px;
+}
+
+.user-block-option a {
+	display: block;
+	float: right;
+	color: #323232;
+	font-size: 13px;
+	line-height: 24px;
+	width: 143px;
+	text-decoration: underline;
+}
+
+.user-block:hover .form {
+	display: block;
 }
 
 .basket {
@@ -327,12 +484,12 @@ h1, h2 {
 	width: 21px;
 	height: 20px;
 	background: transparent url("../img/sprite.png");
-	background-position: -10px -10px;
+	background-position: -20px -228px;
 }
 
 .basket-button:hover::before {
 	background: url("../img/sprite.png");
-	background-position: -10px -50px;
+	background-position: -20px -268px;
 }
 
 .basket-button:hover {
@@ -361,7 +518,7 @@ h1, h2 {
 	width: 21px;
 	height: 20px;
 	background: transparent url("../img/sprite.png");
-	background-position: -10px -142px;
+	background-position: -20px -360px;
 }
 
 .full-basket-table {
@@ -375,6 +532,7 @@ h1, h2 {
 	width: 165px;
 	font-size: 14px;
 	margin-top: 29px;
+	text-align: right;
 }
 
 .time {
@@ -502,7 +660,38 @@ h1, h2 {
 	width: 267px;
 	vertical-align: top;
 	margin-right: 26px;
+	margin-bottom: 40px;
 	z-index: 5;
+	text-align: center;
+}
+
+.goods .item:hover {
+	z-index: 6;
+}
+
+.item:hover .btn {
+	display: block;
+}
+
+.item img {
+	position: relative;
+}
+
+.goods .item::before {
+	display: none;
+	content: "";
+	position: absolute;
+	background: rgba(255, 255, 255, 0.6);
+	box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+	opacity: 0.3;
+	top: -6px;
+	bottom: -86px;
+	left: -13px;
+	right: -13px;
+}
+
+.goods .item:hover::before {
+	display: block;
 }
 
 .goods .item:nth-child(4n) {
@@ -519,16 +708,17 @@ h1, h2 {
 
 .item .price {
 	position: absolute;
+	left: 0;
 	font-size: 45px;
 	font-weight: bold;
 	text-align: left;
-	white-space: pre;
 	text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
 	top: 216px;
 	z-index: 15;
 }
 
 .item .ruble {
+	font-size: 0;
 	position: absolute;
 	top: -7px;
 	left: 80px;
@@ -538,15 +728,9 @@ h1, h2 {
 	z-index: 15;
 }
 
-.kg {
+.weight {
 	font-size: 26px;
-}
-
-/* пока не знаю как?? техт-алайн логично не работает?
-Дать block станет бордер снизу только,
-может надо в боди а бордер изменить на другой эффект?*/
-.item a {
-	text-align: center;
+	margin-left: 36px;
 }
 
 span + a:hover {
@@ -555,45 +739,20 @@ span + a:hover {
 }
 
 .btn-quick-view {
-	visibility: hidden;
-}
-
-/*
-.quick-view:hover {
-	background: rgba(255, 255, 255, 0.2);
-	box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
-	padding: 6px 13px 0px;
-}
-
-.quick-view:hover:nth-child(4n) {
-	background: rgba(255, 255, 255, 0.2);
-	box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
-	padding: 6px 0px 0px 13px;
-}
-
-.goods .focus {
-	position: relative;
-	z-index: 20;
-	background: rgba(255, 255, 255, 0.2);
-	box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
-	padding: 6px 13px 0px;
-}
-
-.btn-quick-view {
+	display: none;
+	position: absolute;
+	left: 50%;
+	bottom: -65px;
+	margin-left: -100px;
 	font-size: 18px;
 	line-height: 24px;
 	font-weight: bold;
 	padding: 14px 17px;
-	margin-top: 11px;
-	margin-left: 32px;
-	margin-bottom: 21px;
-
 }
-*/
+
 .shop {
 	background: #FFF9CB url("../img/bg-waffle.jpg") repeat;
 	border-radius: 15px;
-	margin-top: 40px;
 	margin-bottom: 40px;
 }
 
@@ -603,7 +762,7 @@ span + a:hover {
 	font-weight: medium;
 	line-height: 30px;
 	padding-top: 20px;
-	padding-left: 10px;
+	padding-left: 20px;
 }
 
 .technology {
@@ -625,7 +784,7 @@ span + a:hover {
 	width: 49px;
 	height: 49px;
 	background: transparent url("../img/sprite.png");
-	background-position: -10px -546px;
+	background-position: -20px -764px;
 }
 
 .leaf::before {
@@ -636,7 +795,7 @@ span + a:hover {
 	width: 49px;
 	height: 49px;
 	background: transparent url("../img/sprite.png");
-	background-position: -10px -615px;
+	background-position: -20px -833px;
 }
 
 .cow::before {
@@ -647,7 +806,7 @@ span + a:hover {
 	width: 49px;
 	height: 49px;
 	background: transparent url("../img/sprite.png");
-	background-position: -10px -477px;
+	background-position: -20px -694px;
 }
 
 .termometr::before {
@@ -658,7 +817,7 @@ span + a:hover {
 	width: 49px;
 	height: 49px;
 	background: transparent url("../img/sprite.png");
-	background-position: -10px -684px;
+	background-position: -20px -902px;
 }
 
 .blog {
@@ -697,14 +856,21 @@ span + a:hover {
 	float: right;
 	width: 560px;
 	margin-bottom: 40px;
+	background: url("../img/bg-subscribe.jpg") repeat;
+	border-radius: 15px;
+}
+
+.subscribe-wrapper {
 	background: #f8f7f4;
+	margin: 5px 5px 5px 6px;
 	border-radius: 15px;
 }
 
 .subscribe p {
+	line-height: 18px;
 	color: #5a5a5a;
 	margin: 0;
-	padding: 32px 27px 39px 27px;
+	padding: 31px 27px 40px 27px;
 }
 
 .subscribe form {
@@ -712,13 +878,14 @@ span + a:hover {
 	padding: 0px 0px 33px 26px;
 }
 
-/*тут тоже есть недочеты, в маргинах и паддингах кажется
-и кнопка съезжает, если масшатибровать */
 .e-mail {
 	font-size: 16px;
 	line-height: 24px;
 	width: 366px;
 	padding: 10px 14px;
+	box-sizing: border-box;
+	margin-right: 10px;
+	border-radius: 5px;
 }
 
 .send-btn {
@@ -726,17 +893,20 @@ span + a:hover {
 	line-height: 24px;
 	font-weight: bold;
 	border: 0;
-	padding: 11px 19px 15px 19px;
+	margin-right: 14px;
+	padding: 14px 19px;
 }
 
-.maps {
+.map {
 	margin: 0 auto;
 	width: 100%;
 	height: auto;
+	background: url("../img/img-map.jpg") no-repeat;
 }
 
 .feedback {
 	position: absolute;
+	width: 302px;
 	top: -390px;
 	right: 27px;
 	background: rgba(255, 255, 255, 0.98);
@@ -745,6 +915,7 @@ span + a:hover {
 }
 
 .feedback p {
+	width: 221px;
 	font-size: 14px;
 	line-height: 20px;
 	margin: 0;
@@ -766,7 +937,102 @@ span + a:hover {
 }
 
 .feedback-form {
+	position: absolute;
 	display: none;
+	z-index: 110;
+	top: 338px;
+	left: 50%;
+	width: 477px;
+	padding-top: 22px;
+	padding-left: 24px;
+	margin-left: -239px;
+	color: #323232;
+	background: #f8f7f4;
+	border-radius: 15px;
+	box-sizing: border-box;
+}
+
+.overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.feedback-form-close {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	width: 18px;
+	height: 17px;
+	font-size: 0;
+	border: 0;
+	background: #f8f7f4;
+	cursor: pointer;
+}
+
+.feedback-form h2 {
+	font-size: 24px;
+	line-height: 28px;
+	margin: 0;
+	margin-bottom: 23px;
+
+}
+.feedback-form-close::before,
+.feedback-form-close::after {
+	content: "";
+	position: absolute;
+	top: 7px;
+	right: -3px;
+	width: 24px;
+	height: 3px;
+	background-color: #060606;
+	border-radius: 1px;
+}
+
+.feedback-form-close::before {
+	transform: rotate(45deg);
+}
+
+.feedback-form-close::after {
+	transform: rotate(-45deg);
+}
+
+.feedback-form input[type="text"],
+.feedback-form input[type="email"],
+.feedback-form textarea {
+	font-size: 16px;
+	line-height: 24px;
+	padding: 11px 14px;
+	border-radius: 5px;
+}
+
+.feedback-form input {
+	width: 237px;
+	margin-bottom: 20px;
+}
+
+.feedback-form textarea {
+	width: 399px;
+	height: 155px;
+}
+
+.send-feedback-btn {
+	font-size: 18px;
+	line-height: 24px;
+	float: right;
+	width: 139px;
+	margin: 0;
+	padding: 11px 24px 13px 24px;
+	border: 0;
+	cursor: pointer;
+	margin-top: 24px;
+	margin-bottom: 27px;
+	margin-right: 24px;
 }
 
 .pagination {
@@ -794,7 +1060,7 @@ span + a:hover {
 	font-size: 13px;
 	line-height: 18px;
 	float: left;
-	display: inline-block;
+	display: block;
 	vertical-align: top;
 	padding-left: 105px;
 	width: 455px;
@@ -812,7 +1078,18 @@ span + a:hover {
 	width: 15px;
 	height: 13px;
 	background: transparent url("../img/sprite.png");
-	background-position: -10px -182px;
+	background-position: -20px -400px;
+}
+
+.regulations {
+	float: left;
+	width: 117px;
+}
+
+.about-production {
+	float: left;
+	width: 170px;
+	margin-left: 26px;
 }
 
 .footer-copyright {
@@ -834,7 +1111,7 @@ span + a:hover {
 	width: 108px;
 	height: 38px;
 	background: transparent url("../img/sprite.png");
-	background-position: -10px -346px;
+	background-position: -20px -564px;
 }
 
 .footer-copyright a:hover {
@@ -852,57 +1129,32 @@ span + a:hover {
 	text-decoration: none;
 	vertical-align: top;
 	background: url("../img/sprite.png") no-repeat;
+	opacity: 0.8;
 	border-radius: 50%;
 	border: 4px solid rgba(255, 255, 255, 0.5);
 }
 
-/*C твиттером явно что-то не так*/
 .social-btn-tw {
-	background-position: -10px -753px;
+	background-position: -10.5px -114px;
 }
 
 .social-btn-inst {
-	background-position: -10px -215px;
+	background-position: -10px -62px;
 }
 
 .social-btn-fb {
-	background-position: -10px -90px;
+	background-position: -10px -10px;
 }
 
 .social-btn-vk {
-	background-position: -10px -805px;
+	background-position: -10px -166px;
 }
 
-.btn {
-	display: inline-block;
-	vertical-align: top;
-	color: #ffffff;
-	text-decoration: none;
-	text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
-	background: #f26843;
-	background:    -moz-linear-gradient(top, #f26843 0%, #e74a35 100%);
-	background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
-	background:         linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
-	border-radius: 100px;
-	box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+/*тут будут тени при нажатии*/
+.social-btn:hover {
+	opacity: 1;
 }
 
-.btn:hover {
-	background:    -moz-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
-	background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
-	background:         linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
-	box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
-}
+.social-btn:active {
 
-.btn:active {
-	background:    -moz-linear-gradient(top, #d84732 0%, #e1613e 100%);
-	background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
-	background:         linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
-	box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
-}
-
-.clearfix::after {
-	content: "";
-	display: table;
-	clear: both;
 }
