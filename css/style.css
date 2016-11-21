@@ -41,6 +41,7 @@ textarea {
 .btn {
 	display: inline-block;
 	vertical-align: top;
+	font-family: "Roboto", "Arial", sans-serif;
 	color: #ffffff;
 	text-decoration: none;
 	text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
@@ -271,7 +272,7 @@ textarea {
 	padding: 6px 13px 6px 14px;
 }
 
-/* это кажется костылем, 1:30 ночи, делаю чтобы попробовать;*/ 
+/* КОСТЫЛИЩЕЕЕЕ */
 .active::after {
 	content: "";
 	position: absolute;
@@ -445,6 +446,7 @@ textarea {
     margin-right: 15px;
     padding: 12px 25px 12px 25px;
     cursor: pointer;
+    text-shadow: none;
 }
 
 .user-block input {
@@ -590,7 +592,7 @@ td {
 	display: none;
 }
 
-.login-checkbox input[type="checkbox"] + .checkbox-indicator {
+.table-checkbox input[type="checkbox"] + .checkbox-indicator {
 	position: absolute;
 	left: 17px;
 	width: 10px;
@@ -599,8 +601,8 @@ td {
 	cursor: pointer;
 }
 
-.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before,
-.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after {
+.table-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before,
+.table-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after {
 	content: "";
 	position: absolute;
 	top: 5px;
@@ -610,11 +612,11 @@ td {
 	background-color: #000000;
 }
 
-.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before {
+.table-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before {
 	transform: rotate(45deg);
 }
 
-.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after {
+.table-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after {
 	transform: rotate(-45deg);
 }
 
@@ -632,11 +634,15 @@ td {
 }
 
 .checkout-btn {
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: bold;
 	float: right;
 	margin: 13px 14px 19px;
 	padding: 14px 15px;
 	font-size: 18px;
 	line-height: 24px;
+	text-shadow: none;
 }
 
 table::after {
@@ -925,6 +931,7 @@ table::after {
 	margin-top: 45px;
 	margin-bottom: 23px;
 	padding: 14px 22px;
+	text-shadow: none;
 }
 
 .raspberries {
@@ -1042,6 +1049,7 @@ span + a:hover {
 	line-height: 24px;
 	font-weight: bold;
 	padding: 14px 17px;
+	text-shadow: none;
 }
 
 .item:hover a {
@@ -1184,6 +1192,14 @@ span + a:hover {
 	margin-right: 14px;
 	padding: 14px 19px;
 	cursor: pointer;
+	text-shadow: none;
+}
+
+.map {
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+	margin-bottom: 17px;
 }
 
 .feedback {
@@ -1216,6 +1232,7 @@ span + a:hover {
 	font-weight: bold;
 	margin: 25px 24px 29px 24px;
 	padding: 10px 28px 13px 28px;
+	text-shadow: none;
 }
 
 .feedback-form {
@@ -1314,6 +1331,7 @@ span + a:hover {
 .send-feedback-btn {
 	font-size: 18px;
 	line-height: 24px;
+	font-weight: bold;
 	float: right;
 	width: 139px;
 	margin: 0;
@@ -1323,6 +1341,7 @@ span + a:hover {
 	margin-top: 24px;
 	margin-bottom: 27px;
 	margin-right: 24px;
+	text-shadow: none;
 }
 
 .pagination {
@@ -1473,11 +1492,10 @@ a.current-page {
 	background-position: -10px -166px;
 }
 
-/*тут будут тени при нажатии*/
 .social-btn:hover {
 	opacity: 1;
 }
 
 .social-btn:active {
-	box-shadow: inset 0 30px 30px -30px #909090;
+	box-shadow: inset 0 2px 1px 1px #888888;
 }
