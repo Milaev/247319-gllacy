@@ -1328,30 +1328,43 @@ span + a:hover {
 .pagination {
 	float: right;
 	width: 190px;
-	margin-top: 62px;
-	margin-bottom: 49px;
-	text-align: center;
+	padding: 0;
+	margin: 0;
 }
 
 .pagination a {
+	display: inline-block;
+	color: #ffffff;
+	float: left;
+	width: 26px;
+	height: 26px;
+	text-decoration: none;
 	border: none;
+	text-align: center;
+	margin-top: 62px;
+	margin-bottom: 40px;
 }
 
-.page {
-	font-size: 16px;
-	line-height: 18px;
-	font-weight: 500;
-	padding-right: 17px;
-}
-
-.prev-page {
-	margin-right: 17px;
-}
-
-.page {
-	background: #ffffff;
+.pagination a:hover {
 	color: #323232;
+	background: rgba(255, 255, 255, 0.3);
 	border-radius: 50%;
+}
+
+a.current-page {
+	color: #323232;
+	background: #ffffff;
+	border-radius: 50%;
+}
+
+.goods::after {
+	content: "";
+	position: absolute;
+	top: 1462px;
+	height: 1px;
+	background: rgba(255, 255, 255, 0.2);
+	width: 1146px;
+	left: 27px;
 }
 
 .main-footer {
