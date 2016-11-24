@@ -1293,19 +1293,42 @@ p.termometr {
 	display: block;
 }
 
+@-webkit-keyframes boom {
+	0% {
+		-webkit-transform: translateY(-1200px);
+				transform: translateY(-1200px);
+	}
+	70% {
+		-webkit-transform: translateY(30px);
+				transform: translateY(30px);
+	}
+	90% {
+		-webkit-transform: translateY(-10px);
+				transform: translateY(-10px);
+	}
+	100% {
+		-webkit-transform: translateY(0);
+				transform: translateY(0);
+	}
+}
+
 @keyframes boom {
-  0%   {
-    transform: translateY(-1200px);
-  }
-  70%  {
-    transform: translateY(30px);
-  }
-  90%  {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0);
-  }
+	0% {
+		-webkit-transform: translateY(-1200px);
+				transform: translateY(-1200px);
+	}
+	70% {
+		-webkit-transform: translateY(30px);
+				transform: translateY(30px);
+	}
+	90% {
+		-webkit-transform: translateY(-10px);
+				transform: translateY(-10px);
+	}
+	100% {
+		-webkit-transform: translateY(0);
+				transform: translateY(0);
+	}
 }
 
 .feedback-form-close {
