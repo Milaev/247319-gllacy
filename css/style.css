@@ -802,7 +802,6 @@ table::after {
 .fatness {
 	display: inline-block;
 	vertical-align: top;
-
 }
 
 .fatness p {
@@ -823,9 +822,11 @@ table::after {
 	font-size: 16px;
 	line-height: 18px;
 	font-weight: 500;
+	user-select: none;
 }
 
 .fatness-style label {
+	position: relative;
 	cursor: pointer;
 	margin-right: 19px;
 }
@@ -837,6 +838,87 @@ table::after {
 .fatness-style input {
 	cursor: pointer;
 	margin-right: 10px;
+}
+
+input[type="radio"] {
+	visibility: hidden;
+}
+
+.fatness-style label::before {
+	content: "";
+	position: absolute;
+	left: -5px;
+	top: -1px;
+	width: 20px;
+	height: 20px;
+	border: 1px solid #ffffff;
+	border-radius: 50%;
+}
+
+.fatness-style label:hover::before {
+	left: -6px;
+	top: -2px;
+	border: 2px solid #ffffff;
+}
+
+.fatness-radio input[type="radio"]:checked + .fatness-indicator::before {
+	content: "";
+	position: absolute;
+	top: 4px;
+	left: 0;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background-color: #ffffff;
+}  
+
+input[type="checkbox"] {
+	visibility: hidden;
+}
+
+.toping-style label::before {
+	content: "";
+	position: absolute;
+	left: -5px;
+	top: -1px;
+	width: 20px;
+	height: 20px;
+	border: 1px solid #ffffff;
+	border-radius: 5px;
+}
+
+.toping-style label:hover::before {
+	border: 2px solid #ffffff;
+	top: -2px;
+	left: -6px;
+}
+
+.toping-checkbox input[type="checkbox"]:checked + .indicator::before {
+	content: "";
+	position: absolute;
+	top: 12px;
+	left: -3px;
+	width: 8px;
+	height: 3px;
+	background-color: #ffffff;
+}  
+
+.toping-checkbox input[type="checkbox"]:checked + .indicator::after {
+	content: "";
+	position: absolute;
+	top: 8px;
+	left: 1px;
+	width: 15px;
+	height: 3px;
+	background-color: #ffffff;
+}
+
+.toping-checkbox input[type="checkbox"]:checked + .indicator::before {
+	transform: rotate(45deg);
+}
+
+.toping-checkbox input[type="checkbox"]:checked + .indicator::after {
+	transform: rotate(-45deg);
 }
 
 .toping {
@@ -865,8 +947,9 @@ table::after {
 }
 
 .toping-style label {
+	position: relative;
 	cursor: pointer;
-	margin-right: 21px;
+	margin-right: 20px;
 }
 
 .toping-style label:last-child {
